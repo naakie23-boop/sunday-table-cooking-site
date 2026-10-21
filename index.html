@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>Sunday Table — Good food, made simply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#26372d;--muted:#778078;--paper:#f7f5ef;--green:#476b4e;--lime:#d8e4b8;--orange:#df8255;--line:#e7e5dc;--white:#fffefb}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f5ef;color:#26372d;font-family:'DM Sans',sans-serif}button,input{font:inherit}a{color:inherit;text-decoration:none}.wrap{width:calc(100% - 48px);max-width:1160px;margin-left:auto;margin-right:auto}
+    .announcement{background:#476b4e;color:#fff;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.07em}.announcement span{color:#dce8be}
+    header{height:82px;display:flex;align-items:center;border-bottom:1px solid #e7e5dc}.nav{display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:25px;font-weight:700;letter-spacing:-.5px}.brand-mark{width:34px;height:34px;background:#476b4e;border-radius:50% 50% 48% 7%;display:grid;place-items:center;color:#fff;font:18px Georgia;transform:rotate(-8deg)}.brand-mark span{transform:rotate(8deg)}.links{display:flex;gap:34px;color:#59645c;font-size:13px}.links a:hover{color:#df8255}.menu-btn:focus,.icon-btn:focus,.filter:focus,.save:focus,.button:focus,.links a:focus{outline:2px solid #df8255;outline-offset:3px}.links.show{display:flex}.nav-actions{display:flex;align-items:center;gap:18px}.icon-btn{border:0;background:transparent;cursor:pointer;color:#26372d;font-size:20px}.menu-btn{display:none}
+    .hero{display:grid;grid-template-columns:1fr 1.03fr;gap:58px;align-items:center;padding:58px 0 70px}.eyebrow{font-size:11px;font-weight:700;color:#476b4e;text-transform:uppercase;letter-spacing:.16em;display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';width:22px;height:1px;background:#df8255}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Playfair Display',serif}h1{font-size:76px;line-height:1.02;letter-spacing:-2.6px;margin:20px 0 20px;font-weight:600}h1 em{color:#476b4e;font-weight:500}.hero-copy>p{font-size:15px;color:#727a72;line-height:1.8;max-width:415px;margin-bottom:28px}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#476b4e;color:white;padding:15px 21px;border-radius:4px;font-size:13px;font-weight:600;transition:.2s}.button:hover{background:#36563e;transform:translateY(-2px)}.button .arrow{font-size:18px}.hero-note{display:flex;align-items:center;gap:12px;margin-top:28px;color:#6f786f;font-size:11px}.avatars{display:flex}.avatars img{width:27px;height:27px;object-fit:cover;border-radius:50%;border:2px solid #f7f5ef;margin-right:-8px}.hero-note strong{color:#26372d}
+    .hero-photo{height:470px;position:relative}.hero-photo>img{width:100%;height:100%;object-fit:cover;border-radius:46% 46% 5px 5px}.photo-tag{position:absolute;left:-26px;bottom:34px;background:#fffefb;padding:16px 20px;box-shadow:0 9px 26px #26372d15;display:flex;align-items:center;gap:13px}.tag-icon{width:35px;height:35px;border-radius:50%;background:#f5e8dc;color:#df8255;display:grid;place-items:center;font-size:17px}.photo-tag small{display:block;color:#858a81;font-size:10px;margin-bottom:4px}.photo-tag strong{font-family:'Playfair Display',serif;font-size:16px}.photo-caption{position:absolute;right:14px;top:14px;color:white;background:#26372d8a;border-radius:30px;padding:8px 13px;font-size:10px;backdrop-filter:blur(5px)}
+    .ticker{background:#d8e4b8;padding:17px 0;overflow:hidden}.ticker-inner{display:flex;justify-content:space-around;align-items:center;gap:32px;white-space:nowrap;color:#425944;font-family:'Playfair Display',serif;font-size:17px}.ticker b{font-family:sans-serif;color:#df8255;font-size:12px}
+    .section{padding:80px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section-head h2{font-size:42px;letter-spacing:-1px;margin:10px 0 0}.section-head p{font-size:13px;color:#778078;margin:0 0 5px}.filter-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:20px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #e7e5dc;background:transparent;padding:9px 15px;border-radius:30px;color:#667068;font-size:11px;cursor:pointer}.filter.active,.filter:hover{background:#476b4e;border-color:#476b4e;color:white}.search{display:flex;border-bottom:1px solid #c9cdc3;align-items:center;gap:8px;padding:8px 3px;color:#8a9088}.search input{border:0;background:transparent;outline:0;width:145px;font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.recipe{background:#fffefb;border-radius:5px;overflow:hidden;transition:transform .2s}.recipe:hover{transform:translateY(-4px)}.recipe-image{height:225px;position:relative;overflow:hidden}.recipe-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.recipe:hover .recipe-image img{transform:scale(1.04)}.save{position:absolute;right:13px;top:13px;border:0;border-radius:50%;width:35px;height:35px;background:#fffef0ed;cursor:pointer;color:#647064;font-size:18px}.save.saved{color:#d96e54}.badge{position:absolute;left:14px;bottom:14px;background:#fffefb;padding:7px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#476b4e;border-radius:2px}.recipe-body{padding:18px 19px 17px}.recipe-body h3{font-size:21px;line-height:1.25;margin:0 0 9px}.recipe-body p{font-size:11px;color:#81877f;margin:0 0 16px;line-height:1.6}.recipe-meta{border-top:1px solid #efeee9;padding-top:12px;display:flex;justify-content:space-between;color:#68736a;font-size:10px}.recipe-meta span{display:flex;align-items:center;gap:5px}.recipe[hidden]{display:none}
+    .story{background:#e9eee0;padding:65px 0}.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story-image{height:350px;position:relative}.story-image img{width:100%;height:100%;object-fit:cover;border-radius:4px}.story-image:after{content:'A little more slow, a lot more delicious';position:absolute;right:-16px;bottom:-16px;background:#df8255;color:#fff;padding:15px 20px;font-family:'Playfair Display',serif;font-style:italic;font-size:15px}.story-copy h2{font-size:43px;line-height:1.12;letter-spacing:-1px;margin:13px 0 17px}.story-copy p{color:#6d796e;font-size:13px;line-height:1.9;max-width:410px}.story-copy .button{margin-top:10px}
+    .newsletter{padding:74px 0;text-align:center}.newsletter .eyebrow{justify-content:center}.newsletter h2{font-size:39px;margin:12px 0}.newsletter p{color:#778078;font-size:13px}.subscribe{display:flex;max-width:450px;margin:23px auto 0;border-bottom:1px solid #b9c0b6;padding:5px 0 9px}.subscribe input{flex:1;min-width:0;border:0;background:transparent;outline:0;font-size:12px;padding:5px}.subscribe button{border:0;background:transparent;color:#476b4e;font-size:12px;font-weight:700;cursor:pointer}.form-message{height:17px;margin-top:9px;color:#476b4e;font-size:11px}
+    footer{background:#26372d;color:#fff;padding:28px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center}.footer-brand{font:21px 'Playfair Display',serif}.footer-brand small{display:block;color:#acb9a8;font:10px 'DM Sans',sans-serif;margin-top:5px}.footer-links{display:flex;gap:22px;color:#c7d0c4;font-size:11px}.copyright{color:#aab6a8;font-size:10px}
+    @media(max-width:800px){h1{font-size:60px}.links{gap:17px}.hero{gap:28px;padding:44px 0 55px}.hero-photo{height:400px}.grid{grid-template-columns:repeat(2,1fr)}.section{padding:65px 0}.story-inner{gap:38px}.story-copy h2{font-size:36px}}
+    @media(max-width:620px){.wrap{width:calc(100% - 34px);max-width:460px}header{height:68px}.links{display:none}.menu-btn{display:block}.nav-actions{gap:11px}.brand{font-size:22px}.hero{grid-template-columns:1fr;padding:42px 0 48px;gap:30px}.hero-copy{order:1}.hero-photo{order:0;height:350px;width:calc(100% - 12px);margin-left:12px}.photo-tag{left:-12px;bottom:22px;padding:12px 15px}h1{font-size:57px;margin:14px 0}.hero-copy>p{font-size:14px}.ticker-inner{justify-content:flex-start;animation:slide 20s linear infinite;width:max-content}.ticker-inner span{padding:0 12px}@keyframes slide{to{transform:translateX(-25%)}}.section-head{display:block}.section-head h2{font-size:36px}.section-head>p{margin-top:11px}.filter-row{align-items:flex-start;flex-direction:column}.search{width:100%}.search input{width:100%}.grid{grid-template-columns:1fr;gap:16px}.recipe-image{height:245px}.story{padding:48px 0}.story-inner{grid-template-columns:1fr;gap:35px}.story-image{height:280px;margin-right:10px}.story-copy h2{font-size:37px}.newsletter{padding:57px 0}.newsletter h2{font-size:34px}.footer-inner{align-items:flex-start;gap:20px;flex-wrap:wrap}.footer-links{order:3;width:100%;flex-wrap:wrap}.copyright{margin-left:auto;padding-top:4px}}
+    /* Layout fallbacks for browsers without CSS Grid. */
+    @supports not (display:grid) {
+      .hero,.story-inner{display:flex;flex-wrap:wrap}
+      .hero-copy,.hero-photo,.story-image,.story-copy{flex:1 1 45%;min-width:280px}
+      .grid{display:flex;flex-wrap:wrap;margin-left:-11px;margin-right:-11px}
+      .recipe{width:calc(33.333% - 22px);margin:0 11px 22px}
+      .hero-photo{min-height:350px}
+      @media(max-width:800px){.recipe{width:calc(50% - 22px)}}
+      @media(max-width:620px){.hero-copy,.hero-photo,.story-image,.story-copy{flex-basis:100%;min-width:0}.recipe{width:calc(100% - 22px)}}
+    }
+    @media(max-width:620px){.menu-btn[aria-expanded="true"]{color:#df8255}.links.show{position:absolute;z-index:5;top:112px;left:0;right:0;background:#fffefb;padding:20px 24px;box-shadow:0 8px 16px #26372d18;flex-direction:column;gap:18px}}
+  </style>
+</head>
+<body>
+  <div class="announcement">A fresh little corner of the internet <span>✳</span> New recipes every Sunday</div>
+  <header><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark"><span>✳</span></span> sunday table</a><nav class="links"><a href="#recipes">Recipes</a><a href="#story">Our kitchen</a><a href="#newsletter">Get the letter</a></nav><div class="nav-actions"><a class="icon-btn" href="#recipes" aria-label="Search recipes">⌕</a><button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button></div></div></header>
+  <main id="top">
+    <section class="wrap hero"><div class="hero-copy"><div class="eyebrow">Good food, made simply</div><h1>Come hungry.<br><em>Leave happy.</em></h1><p>Recipes for slow Sundays, busy Tuesdays, and every lovely little meal in between. Pull up a chair — there's always room.</p><a class="button" href="#recipes">Find your next favourite <span class="arrow">↗</span></a><div class="hero-note"><div class="avatars"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=faces" alt=""><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces" alt=""><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=80&h=80&fit=crop&crop=faces" alt=""></div><span>Loved by <strong>12,000+</strong> home cooks</span></div></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1200&h=1400&fit=crop" alt="A colourful, freshly prepared meal on a sunny table"><span class="photo-caption">A little taste of Sunday</span><div class="photo-tag"><span class="tag-icon">♡</span><div><small>THIS WEEK'S MOST LOVED</small><strong>Green goddess bowl</strong></div></div></div></section>
+    <div class="ticker"><div class="wrap ticker-inner"><span>Cook something lovely</span><b>✳</b><span>Make room for seconds</span><b>✳</b><span>Gather around the table</span><b>✳</b><span>Cook something lovely</span><b>✳</b></div></div>
+    <section class="wrap section" id="recipes"><div class="section-head"><div><div class="eyebrow">From our kitchen</div><h2>A good thing to make</h2></div><p>Simple ingredients. A little love. That's the whole recipe.</p></div><div class="filter-row"><div class="filters"><button class="filter active" data-filter="all">All recipes</button><button class="filter" data-filter="quick">Quick & easy</button><button class="filter" data-filter="vegetarian">Vegetarian</button><button class="filter" data-filter="comfort">Comfort food</button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a recipe..."></label></div>
+      <div class="grid" id="recipe-grid">
+        <article class="recipe" data-category="vegetarian quick" data-name="green goddess grain bowl avocado herbs"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&h=650&fit=crop" alt="Fresh green grain bowl"><button class="save" aria-label="Save recipe">♡</button><span class="badge">Reader favourite</span></div><div class="recipe-body"><h3>Green goddess grain bowl</h3><p>Creamy herbs, crunchy greens, and a squeeze of lemon. Lunch, sorted.</p><div class="recipe-meta"><span>◷ 25 min</span><span>✳ Vegetarian</span><span>♡ 4.9</span></div></div></article>
+        <article class="recipe" data-category="comfort" data-name="roast tomato butter beans toast comfort"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=900&h=650&fit=crop" alt="Rustic tomato and bean dish"><button class="save" aria-label="Save recipe">♡</button><span class="badge">One-pan wonder</span></div><div class="recipe-body"><h3>Roast tomato butter beans</h3><p>Soft beans, jammy tomatoes, good crusty bread. Best eaten straight from the pan.</p><div class="recipe-meta"><span>◷ 35 min</span><span>✳ Easy</span><span>♡ 4.8</span></div></div></article>
+        <article class="recipe" data-category="quick comfort" data-name="lemony orzo crispy chickpeas pasta"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=900&h=650&fit=crop" alt="Pasta with greens and lemon"><button class="save" aria-label="Save recipe">♡</button><span class="badge">Weeknight favourite</span></div><div class="recipe-body"><h3>Lemony orzo & crispy chickpeas</h3><p>A bright, buttery bowl with golden chickpeas and just enough parmesan.</p><div class="recipe-meta"><span>◷ 20 min</span><span>✳ One pot</span><span>♡ 4.9</span></div></div></article>
+        <article class="recipe" data-category="comfort" data-name="Sunday roast squash soup cozy"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900&h=650&fit=crop" alt="Golden squash soup with herbs"><button class="save" aria-label="Save recipe">♡</button><span class="badge">Slow Sunday</span></div><div class="recipe-body"><h3>Roasty squash & sage soup</h3><p>Golden squash, crispy sage, and a swirl of cream for chilly evenings.</p><div class="recipe-meta"><span>◷ 50 min</span><span>✳ Freezer friendly</span><span>♡ 4.7</span></div></div></article>
+        <article class="recipe" data-category="vegetarian quick" data-name="crispy halloumi peaches salad summer"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&h=650&fit=crop" alt="Bright summer salad"><button class="save" aria-label="Save recipe">♡</button><span class="badge">A little sunshine</span></div><div class="recipe-body"><h3>Crispy halloumi & peach salad</h3><p>Sweet peaches, salty cheese, peppery leaves. Summer on a plate.</p><div class="recipe-meta"><span>◷ 15 min</span><span>✳ Vegetarian</span><span>♡ 4.8</span></div></div></article>
+        <article class="recipe" data-category="quick comfort" data-name="brown butter banana bread dessert baking"><div class="recipe-image"><img src="https://images.unsplash.com/photo-1606101273945-e9eba91c0f4b?w=900&h=650&fit=crop" alt="Homemade banana bread"><button class="save" aria-label="Save recipe">♡</button><span class="badge">Bake and share</span></div><div class="recipe-body"><h3>Brown butter banana bread</h3><p>Deeply golden edges, soft middle, and a kitchen that smells like home.</p><div class="recipe-meta"><span>◷ 1 hr</span><span>✳ Makes 1 loaf</span><span>♡ 5.0</span></div></div></article>
+      </div>
+    </section>
+    <section class="story" id="story"><div class="wrap story-inner"><div class="story-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=1100&h=800&fit=crop" alt="A welcoming home kitchen ready for cooking"></div><div class="story-copy"><div class="eyebrow">A seat at our table</div><h2>Cooking should feel like coming home.</h2><p>Sunday Table began with a scribbled notebook, a tiny kitchen, and the belief that the best meals don't need to be complicated. Just good ingredients, a generous table, and people you love.</p><p>Every recipe here is cooked, shared, and happily eaten before it makes its way to you.</p><a href="#newsletter" class="button">A little more about us <span class="arrow">↗</span></a></div></div></section>
+    <section class="newsletter" id="newsletter"><div class="wrap"><div class="eyebrow">A note from our kitchen</div><h2>Something good in your inbox.</h2><p>One lovely recipe, a little kitchen inspiration, every Sunday.</p><form class="subscribe" id="subscribe"><input type="email" placeholder="Your email address" required aria-label="Your email address"><button type="submit">Count me in ↗</button></form><div class="form-message" id="form-message"></div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><div class="footer-brand">sunday table<small>Good food, made simply.</small></div><div class="footer-links"><a href="#recipes">Recipes</a><a href="#story">Our kitchen</a><a href="#newsletter">Say hello</a><a href="#top">Back to top ↑</a></div><div class="copyright">© 2025 Sunday Table</div></div></footer>
+  <script>
+    function toggleMenu(button) {
+      var menu = document.querySelector('.links');
+      var isOpen = menu.classList.contains('show');
+      if (isOpen) { menu.classList.remove('show'); } else { menu.classList.add('show'); }
+      button.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    }
+    (function () {
+      var filters = document.querySelectorAll('.filter');
+      var cards = document.querySelectorAll('.recipe');
+      var saveButtons = document.querySelectorAll('.save');
+      var search = document.querySelector('#search');
+      var category = 'all';
+      function update() {
+        var term = search.value.replace(/^\s+|\s+$/g, '').toLowerCase();
+        for (var i = 0; i < cards.length; i++) {
+          var card = cards[i];
+          var categories = card.getAttribute('data-category').split(' ');
+          var name = card.getAttribute('data-name').toLowerCase();
+          var matchesCategory = category === 'all' || categories.indexOf(category) !== -1;
+          var matchesSearch = name.indexOf(term) !== -1;
+          card.hidden = !(matchesCategory && matchesSearch);
+        }
+      }
+      for (var i = 0; i < filters.length; i++) {
+        filters[i].addEventListener('click', function () {
+          for (var j = 0; j < filters.length; j++) { filters[j].classList.remove('active'); }
+          this.classList.add('active');
+          category = this.getAttribute('data-filter');
+          update();
+        });
+      }
+      search.addEventListener('input', update);
+      for (var k = 0; k < saveButtons.length; k++) {
+        saveButtons[k].addEventListener('click', function () {
+          var saved = this.classList.contains('saved');
+          if (saved) { this.classList.remove('saved'); this.textContent = '♡'; }
+          else { this.classList.add('saved'); this.textContent = '♥'; }
+        });
+      }
+      document.querySelector('#subscribe').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.querySelector('#form-message').textContent = 'You’re on the list. See you Sunday!';
+        event.target.reset();
+      });
+    }());
+  </script>
+</body>
+</html>
+
